@@ -24,11 +24,11 @@
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
-					<url>http://127.0.0.1:80/manager/text</url>
-					<username>YOUR_USERNAME</username>
-					<password>YOUR_PASSWORD</password>
+					<url>http://127.0.0.1:8080/manager/text</url>
+					<username>admin</username>
+					<password>admin123</password>
 					<server>TomcatServer</server>
-					<path>YOUR_PATH</path>
+					<path>/HelloServlet</path>
 					<encoding>UTF-8</encoding>
 					<update>true</update>
 				</configuration>
@@ -37,6 +37,12 @@
 	</build>
 
 	<dependencies>
+	<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
@@ -46,6 +52,16 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.4</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.27</version>
 		</dependency>
 	</dependencies>
 </project>
